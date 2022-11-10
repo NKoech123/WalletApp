@@ -7,7 +7,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import Apploading from "expo-app-loading";
 import {useFonts} from "expo-font";
 
-import Welcome  from './screens/Welcome';
+//React Navigation
+import RootStack from './navigators/RootStack';
 
 export default function App() {
 
@@ -21,15 +22,9 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
- 
-      <Text>Another Update!!</Text>
-      <Welcome/>
-      
-      <StatusBar style="auto" />
-    </View>
+    <RootStack/>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

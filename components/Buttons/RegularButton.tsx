@@ -12,7 +12,7 @@ const ButtonView = styled.TouchableOpacity`
   background-color: ${colors.primary};
   width: 100%;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
 
 `;
 
@@ -27,11 +27,10 @@ interface ButtonProps {
 
 const RegularButton: FunctionComponent<ButtonProps> = (props) => {
   return (
-  <ButtonView onPress={props.onPress}>
-    <RegularText textStyles={props.textStyles}> {props.children} </RegularText>
-  </ButtonView>
-)
-  
+    <ButtonView onPress={props.onPress} style={props.btnStyles}>
+      <RegularText textStyles={props.textStyles}> {props.children} </RegularText>
+    </ButtonView>
+  );
 };
 
-export default RegularButton
+export default RegularButton;
