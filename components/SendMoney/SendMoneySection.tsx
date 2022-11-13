@@ -1,6 +1,6 @@
 import React, {FunctionComponent, useRef} from 'react';
 import styled from "styled-components/native";
-import BottomSheet from "reanimated-bottom-sheet";
+import BottomSheet from 'reanimated-bottom-sheet';
 
 //components
 import { colors } from '../colors';
@@ -51,15 +51,15 @@ const SendMoneySection: FunctionComponent<SendMoneySectionProps> = (props) => {
                 </TextButton>
             </SendMoneyRow>
             <SendMoneyList
-             data = {props.data}
-             contentContainerStyle={{
-              alignItems: "flex-start",
-             }}
-             horizontal= {false}
-             showsVerticalScrollIndicator= {false}
-             numColumns= {3}
-             keyExtractor={({id}: any)=>id.toString()}
-             renderItem={({item}: any)=> <SendMoneyItem {...item}/>}
+              data = {props.data}
+              contentContainerStyle={{
+                alignItems: "flex-start",
+              }}
+              horizontal= {false}
+              showsVerticalScrollIndicator= {false}
+              numColumns= {3}
+              keyExtractor={({id}: any)=>id.toString()}
+              renderItem={({item}: any)=> <SendMoneyItem {...item}/>}
             />
         </SendMoneySectionBackground>
         );

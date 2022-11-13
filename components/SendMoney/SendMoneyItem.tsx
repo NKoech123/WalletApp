@@ -1,6 +1,5 @@
 import React, {FunctionComponent} from 'react'
 import styled from "styled-components/native";
-import { View } from 'react-native';
 
 //types
 import { SendMoneyProps } from './types';
@@ -30,7 +29,7 @@ const SendMoneyItem: FunctionComponent<SendMoneyProps> = (props) => {
         alert("Send Money!");
     }}
     >
-        <>
+      <>
         <Profile img={props.img} imgContainerStyle={{marginBottom: 10}}/>
         <SmallText
          textStyles={{
@@ -51,8 +50,7 @@ const SendMoneyItem: FunctionComponent<SendMoneyProps> = (props) => {
             {props.amount}
         </RegularText>
 
-        </>
-
+      </>
     </SendMoneyItemContainer>
   );
 };

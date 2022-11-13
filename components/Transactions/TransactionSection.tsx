@@ -7,6 +7,7 @@ import { colors } from '../colors';
 import RegularText from '../Texts/RegularText';
 import SmallText from '../Texts/SmallText';
 import TransactionItem from './TransactionItem';
+
 //types
 import { TransactionSectionProps } from './types';
 

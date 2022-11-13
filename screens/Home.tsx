@@ -111,11 +111,9 @@ const Home: FunctionComponent = () => {
         <CardSection data={cardData}/>
         <TransactionSection data={transactionData}/>
         <SendMoneySection data={sendMoneyData}/>
-        
-       
     </HomeContainer>
     
   )
 }
-// <SendMoneySection data={sendMoneyData}/>
+
 export default Home;
