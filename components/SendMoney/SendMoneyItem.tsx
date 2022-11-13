@@ -23,11 +23,11 @@ const SendMoneyItemContainer = styled.TouchableHighlight`
 const SendMoneyItem: FunctionComponent<SendMoneyProps> = (props) => {
   return (
     <SendMoneyItemContainer
-    underlayColor={colors.secondary}
-    style={{backgroundColor: props.background}}
-    onPress = { () =>{
-        alert("Send Money!");
-    }}
+      underlayColor={colors.secondary}
+      style={{backgroundColor: props.background}}
+      onPress = { () =>{
+          alert("Send Money!");
+      }}
     >
       <>
         <Profile img={props.img} imgContainerStyle={{marginBottom: 10}}/>
