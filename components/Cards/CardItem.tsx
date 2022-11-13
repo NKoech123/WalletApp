@@ -18,8 +18,6 @@ const CardBackground = styled.ImageBackground`
 const CardTouchable = styled.TouchableHighlight`
    height: 100%;
    border-radius: 25px;
-
-
 `;
 
 const TouchableView = styled.View`
@@ -41,10 +39,11 @@ const Logo = styled.Image`
    height: 80%;
    resize-mode: contain;
    flex: 1;
-
 `;
+
 //images
 import cardBg from '../../assets/avi/transparentBackground.jpeg';
+
 //types
 import { CardProps } from './types';
 
@@ -61,6 +60,6 @@ const CardItem: FunctionComponent<CardProps> =(props) => {
     </CardBackground>
     
   );
-}
+};
 
 export default CardItem

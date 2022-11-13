@@ -2,7 +2,7 @@ import React, {FunctionComponent} from 'react'
 import styled from "styled-components/native";
 
 //components
-const cardList = styled.FlatList`
+const CardList = styled.FlatList`
    width: 100%;
    flex: 1;
    padding-left: 25px;
@@ -10,23 +10,23 @@ const cardList = styled.FlatList`
 `;
 
 //types
+import CardItem from './CardItem'; 
 import { CardSectionProps } from './types';
 
 const CardSection: FunctionComponent<CardSectionProps> = (props) => {
   return (
-    <cardList
+    <CardList
      data = {props.data}
      horizontal={true}
-     showHorizontalScrollIndicator={false}
+     showsHorizontalScrollIndicator={false}
      contentContainerStyle={{
         paddingRight: 25,
         alignItems: "center",
      }}
      keyExtractor={({id}:any)=>id.toString()}
-     renderItem={}
+     renderItem={({item}:any)=> <CardItem {...item} />}
     />
-
-    
+ 
   );
 }
 
