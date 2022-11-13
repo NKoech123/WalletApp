@@ -24,7 +24,6 @@ interface ButtonProps {
     children: React.ReactNode;
 }
 
-
 const RegularButton: FunctionComponent<ButtonProps> = (props) => {
   return (
     <ButtonView onPress={props.onPress} style={props.btnStyles}>
