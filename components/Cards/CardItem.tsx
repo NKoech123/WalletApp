@@ -1,9 +1,12 @@
 import React, {FunctionComponent} from 'react'
 import styled from "styled-components/native";
+import { View } from 'react-native';
 
 //components
 import { colors } from '../colors';
 import { ScreenWidth } from '../shared';
+import RegularText from '../Texts/RegularText';
+import SmallText from '../Texts/SmallText';
 
 const CardBackground = styled.ImageBackground`
    height: 75%;
@@ -53,8 +56,22 @@ const CardItem: FunctionComponent<CardProps> =(props) => {
     <CardBackground source={cardBg}>
         <CardTouchable underlayColor={colors.secondary} onPress={handlePress}>
            <TouchableView>
-             <CardRow></CardRow>
-             <CardRow></CardRow>
+             <CardRow>
+                <RegularText textStyles={{color: colors.white}}>
+                    *******{props.accountNo.slice(4,10)}
+                </RegularText>
+             </CardRow>
+             <CardRow>
+                <View style={{flex:3}}>
+                    <SmallText textStyles={{marginBottom: 5, color: colors.graylight}}>
+                        Total Balance
+                    </SmallText>
+                    <RegularText>
+                      ${props.balance}
+                    </RegularText>
+                </View>
+                <Logo source={props.logo}/>
+             </CardRow>
            </TouchableView>
         </CardTouchable>
     </CardBackground>

@@ -19,22 +19,22 @@ const Home: FunctionComponent = () => {
   const cardData = [
     {
       id: 1,
-      accountNo:"34342535",
-      balance:200043.00,
+      accountNo:"343425.35",
+      balance:200043.21,
       alias: "Work Debit",
       logo: logo1,
     },
     {
       id: 2,
-      accountNo:"99344335",
-      balance:790043.00,
+      accountNo:"993443.35",
+      balance:790043.01,
       alias: "Personal prepaid",
       logo: logo2,
     },
     {
       id: 3,
-      accountNo:"2342535",
-      balance:89043.00,
+      accountNo:"23425.41",
+      balance:89043.18,
       alias: "School prepaid",
       logo: logo1,
     },
@@ -42,6 +42,7 @@ const Home: FunctionComponent = () => {
   return (
     <HomeContainer>
         <StatusBar style="dark"/>
+        <CardSection data={cardData}/>
     </HomeContainer>
   )
 }
