@@ -3,8 +3,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import styled from "styled-components/native";
 
-
-
 //custom Components
 import { colors } from '../components/colors';
 import { Container } from '../components/shared'
@@ -19,7 +17,6 @@ const WelcomeContainer = styled(Container)`
   height: 100%;
 `;
 
-
 const TopSection = styled.View`
    width: 100%;
    flex: 1;
@@ -32,7 +29,6 @@ const TopImage = styled.Image`
    resize-mode: stretch;
 `;
 
-
 const BottomSection = styled.View`
    width: 100%;
    padding: 25px;
@@ -43,8 +39,12 @@ const BottomSection = styled.View`
 //image 
 import background from "../assets/background.png";
 
+//types 
+import { RootStackParamList } from '../navigators/RootStack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+type Props = NativeStackScreenProps<RootStackParamList, "Welcome">
 
-const Welcome: FunctionComponent = () => {
+const Welcome: FunctionComponent<Props> = ({ navigation }) => {
   return (
   <>
   <StatusBar  style="light"/>
@@ -59,7 +59,7 @@ const Welcome: FunctionComponent = () => {
       <SmallText textStyles={{width:"70%", marginBottom:25}}>
         Best Payment method, connects your money to your friends, family
       </SmallText>
-      <RegularButton onPress={()=>{}}>
+      <RegularButton onPress={()=>{ navigation.navigate("Home")}}>
             Get Started
         </RegularButton>
     </BottomSection>

@@ -5,3 +5,7 @@ export interface AmountProps{
 };
 
 export interface BalanceCardProps extends CardProps{};
+
+export interface ButtonSectionprops {
+  name: string;
+}

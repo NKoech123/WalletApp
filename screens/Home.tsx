@@ -22,7 +22,12 @@ const HomeContainer = styled(Container)`
   flex: 1;
 `;
 
-const Home: FunctionComponent = () => {
+//types 
+import { RootStackParamList } from '../navigators/RootStack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+export type Props = NativeStackScreenProps<RootStackParamList, "Home">
+
+const Home: FunctionComponent<Props> = ( {navigation} ) => {
   const cardData = [
     {
       id: 1,

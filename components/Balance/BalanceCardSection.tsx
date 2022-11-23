@@ -4,6 +4,9 @@ import styled from "styled-components/native";
 //types
 import { BalanceCardProps } from './types';
 
+//components
+import BalanceCard from './BalanceCard';
+
 const BalanceCardBackground = styled.View`
   flex: 2;
   width: 100%;
@@ -13,7 +16,9 @@ const BalanceCardBackground = styled.View`
 
 const BalanceCardSection: FunctionComponent<BalanceCardProps> = (props) => {
   return (
-    <></>
+    <BalanceCardBackground>
+      <BalanceCard {...props}/>
+    </BalanceCardBackground>
   )
 }
 

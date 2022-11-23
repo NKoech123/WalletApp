@@ -20,9 +20,9 @@ import Profile from "../components/Header/Profile";
 import { CardProps } from "../components/Cards/types";
 
 export type RootStackParamList = {
-    Welcome: undefined;
-    Home: undefined;
-    Balance: CardProps;
+  Welcome: undefined;
+  Home: undefined;
+  Balance: CardProps;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -56,7 +56,7 @@ const RootStack: FunctionComponent = () => {
               />
             ),
           }}
-          initialRouteName="Balance"
+          initialRouteName="Welcome"
         >
             <Stack.Screen
               name="Welcome"

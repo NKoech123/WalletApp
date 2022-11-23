@@ -4,21 +4,15 @@ import { View } from 'react-native';
 
 //components
 import { colors } from '../colors';
-import { ScreenWidth } from '../shared';
 import RegularText from '../Texts/RegularText';
 import SmallText from '../Texts/SmallText';
 
-//navigation
-import { useNavigation } from '@react-navigation/native';
-import { Props as HomeProps } from '../../screens/Home';
-
 const CardBackground = styled.ImageBackground`
    height: 75%;
-   width: ${ScreenWidth*0.67}px;
+   width: 100%;
    resize-mode: cover;
    background-color: ${colors.accent}
    border-radius: 25px;
-   margin-right: 25px;
    overflow: hidden;
 `;
 
@@ -52,24 +46,15 @@ const Logo = styled.Image`
 import cardBg from '../../assets/avi/transparentBackground.jpeg';
 
 //types
-import { CardProps } from './types';
+import { BalanceCardProps } from './types';
 
-const CardItem: FunctionComponent<CardProps> =(props) => {
-   // configuring navigation
-   const navigation = useNavigation<HomeProps["navigation"]>();
-   
-   //move to balance page
-
-   const handlePress = () => {
-      navigation.navigate("Balance", {...props})
-   };
-   return (
+const BalanceCard: FunctionComponent<BalanceCardProps> =(props) => {
+    return (
     <CardBackground source={cardBg}>
-        <CardTouchable underlayColor={colors.secondary} onPress={handlePress}>
            <TouchableView>
              <CardRow>
                 <RegularText textStyles={{color: colors.white}}>
-                    *******{props.accountNo.slice(4,10)}
+                    *******{props?.accountNo?.slice(4,10)}
                 </RegularText>
              </CardRow>
              <CardRow>
@@ -84,10 +69,9 @@ const CardItem: FunctionComponent<CardProps> =(props) => {
                 <Logo source={props.logo}/>
              </CardRow>
            </TouchableView>
-        </CardTouchable>
     </CardBackground>
     
   );
 };
 
-export default CardItem
+export default BalanceCard
